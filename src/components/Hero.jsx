@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import HyperspeedBackground from "./HyperspeedBackground.jsx";
+
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -9,11 +11,7 @@ const fadeInUp = {
 };
 
 const staggerContainer = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
+  animate: { transition: { staggerChildren: 0.1 } },
 };
 
 export const Hero = () => {
@@ -25,6 +23,9 @@ export const Hero = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.2 }}
     >
+      {/* background goes first so it sits behind everything */}
+      <HyperspeedBackground speed={1.6} density={0.18} fade={0.12} />
+
       <div className="hero-container">
         <motion.div
           className="hero-content"
@@ -33,56 +34,59 @@ export const Hero = () => {
           animate="animate"
         >
           <motion.div className="hero-badge">
-            <span> 👋 Hello, I'm </span>
+            <span>👋 Hello, I'm</span>
           </motion.div>
-          <motion.h1
-            className="glitch"
-            variants={fadeInUp}
-            whileHover={{ scale: 1.02 }}
-          >
-            PedroTech
+
+          <motion.h1 className="glitch" variants={fadeInUp} whileHover={{ scale: 1.02 }}>
+            Erick Perez
           </motion.h1>
+
           <motion.h2 className="hero-subtitle" variants={fadeInUp}>
-            {" "}
-            Creative Developer & Designer
+            Math and Computer Science student at Fordham University
           </motion.h2>
+
           <motion.p className="hero-description" variants={fadeInUp}>
-            I craft beautiful digital experiences that combine stunning design
-            with powerful functionality. Specializing in modern web applications
-            and interactive user interfaces.
+          I love bringing machine learning to life — whether it’s a computer vision model or an AI app that solves real, everyday problems.
           </motion.p>
 
           <motion.div className="cta-buttons" variants={staggerContainer}>
-            <motion.a
-              href="#projects"
-              className="cta-primary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {" "}
+            <motion.a href="#projects" className="cta-primary" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               View My Work
             </motion.a>
-            <motion.a
-              href="#contacts"
-              className="cta-secondary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
+            <motion.a href="#contact" className="cta-secondary" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               Contact Me
             </motion.a>
           </motion.div>
+
           <motion.div className="social-links" variants={staggerContainer}>
-            <motion.a href="https://github.com" target="_blank">
-              <i className="fab fa-github"> </i>
-            </motion.a>
-            <motion.a href="https://linkedin.com" target="_blank">
-              <i className="fab fa-linkedin"> </i>
-            </motion.a>
-            <motion.a href="https://twitter.com" target="_blank">
-              <i className="fab fa-twitter"> </i>
-            </motion.a>
-          </motion.div>
-        </motion.div>
+  <motion.a
+    href="https://github.com/erickxvii"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="GitHub"
+  >
+    <i className="fa-brands fa-github" />
+  </motion.a>
+
+  <motion.a
+    href="https://www.linkedin.com/in/erick-perez-06b3782a9"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn"
+  >
+    <i className="fa-brands fa-linkedin" />
+  </motion.a>
+
+  <motion.a
+    href="https://twitter.com/br1an00524"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Twitter/X"
+  >
+    <i className="fa-brands fa-x-twitter" />
+  </motion.a>
+</motion.div>
+
 
         <motion.div
           className="hero-image-container"
@@ -104,23 +108,21 @@ export const Hero = () => {
               }}
               style={vscDarkPlus}
             >
-              {`const aboutMe: DeveloperProfile = {
-  codename: "PedroTech",
-  origin: "🌍 Somewhere between a coffee shop and a terminal",
-  role: "Fullstack Web Sorcerer",
+{`const aboutMe: DeveloperProfile = {
+  codename: "Erickxvii",
+  origin: "🌇 Somewhere between a Fordham classroom and a terminal window",
+  role: "AI & Software Engineer in training",
   stack: {
-    languages: ["JavaScript", "TypeScript", "SQL"],
-    frameworks: ["React", "Next.js", "TailwindCSS", "Supabase"],
+    languages: ["Python", "C++", "SQL", "TypeScript"],
+    frameworks: ["Next.js", "React", "TailwindCSS", "Supabase"],
   },
   traits: [
-    "pixel-perfectionist",
-    "API whisperer",
-    "dark mode advocate",
-    "terminal aesthetic enthusiast",
+    "detail-driven builder",
+    "API tinkerer",
+    "dark-mode minimalist",
+    "terminal-aesthetic enjoyer",
   ],
-  missionStatement:
-    "Turning ideas into interfaces and bugs into feature",
-  availability: "Available for hire",
+  availability: "Open to internships and collaborations",
 };`}
             </SyntaxHighlighter>
           </div>
@@ -131,11 +133,8 @@ export const Hero = () => {
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
             <div className="card-content">
-              <span className="card-icon"> 💻 </span>
-              <span className="card-text">
-                {" "}
-                Currently working on something awesome!
-              </span>
+              <span className="card-icon">💻</span>
+              <span className="card-text">Currently working on something awesome!</span>
             </div>
           </motion.div>
         </motion.div>

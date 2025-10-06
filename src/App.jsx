@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
+
+
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -30,7 +32,7 @@ function App() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <p> &copy; 2025 PedroTech. All rights reserved.</p>
+        <p> &copy; 2025 erickxvii. All rights reserved.</p>
       </motion.footer>
     </div>
   );

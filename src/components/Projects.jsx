@@ -46,13 +46,14 @@ export const Projects = () => {
         >
           <motion.div
             className="project-image"
-            style={{ backgroundImage: "url('/projects/ai-saas.png')" }}
+            style={{ backgroundImage: "url('/projects/studycoach.png')" }}
             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           />
-          <h3> AI SaaS Platform</h3>
+          <h3> StudyMode Coach
+          </h3>
           <p>
-            A modern SaaS platform built with Next.js and OpenAI integration,
-            featuring real-time AI-powered content generation and analytics.
+          An AI study companion that turns your notes into quizzes, 
+          summaries, and spaced-repetition decks—instantly—plus progress analytics to keep you on track.
           </p>
           <div className="project-tech">
             <span>Next.js</span>
@@ -69,20 +70,22 @@ export const Projects = () => {
           <motion.div
             className="project-image"
             style={{
-              backgroundImage: "url('/projects/social-media.png')",
+              backgroundImage: "url('/projects/cloudflare_agent.png')",
             }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           />
-          <h3>Social Media Dashboard</h3>
+          <h3>Cloudflare AI Security Agent</h3>
           <p>
-            A comprehensive social media management dashboard with analytics,
-            scheduling, and engagement tracking features.
+          An intelligent edge-deployed agent that monitors incoming requests, ingests security logs, 
+  and detects anomalies or attack patterns in real time. Built to automate triage and suggest 
+  protective WAF rule updates using Cloudflare Workers and AI analysis.
           </p>
           <div className="project-tech">
-            <span>React</span>
-            <span>Node.js</span>
-            <span>MongoDB</span>
+            <span>Cloudflare Workers</span>
+            <span>Wrangler</span>
+            <span>AI Inference API</span>
+            <span>TypeScript</span>
           </div>
         </motion.div>
 
@@ -94,20 +97,24 @@ export const Projects = () => {
           <motion.div
             className="project-image"
             style={{
-              backgroundImage: "url('/projects/stopwatch.png')",
+              backgroundImage: "url('/projects/intheworks.png')",
             }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           />
-          <h3>Productivity Timer</h3>
+          <h3>Safe Route Recommender</h3>
           <p>
-            A sleek productivity timer application with customizable work
-            sessions, statistics tracking, and dark mode support.
+          Working on a machine learning project that ranks walking routes by predicted nighttime safety using open NYC 
+  crime data, street light density, and traffic/activity signals. Outputs a route score and 
+  highlights risk hotspots along the path.
           </p>
           <div className="project-tech">
-            <span>React</span>
-            <span>TypeScript</span>
+            <span>Python</span>
+            <span>scikit-learn</span>
+            <span>Pandas</span>
+            <span>Next.js</span>
             <span>TailwindCSS</span>
+
           </div>
         </motion.div>
       </motion.div>

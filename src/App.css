@@ -7,17 +7,17 @@
 :root {
   --primary-color: #7c3aed;
   --primary-dark: #5b21b6;
-  --secondary-color: #db2777;
+  --secondary-color: #942356;
   --accent-color: #f472b6;
   --text-color: #e2e8f0;
   --light-text: #94a3b8;
-  --background: #0f172a;
-  --section-bg: #1e293b;
-  --card-bg: #1e293b;
-  --gradient-start: #7c3aed;
-  --gradient-end: #db2777;
-  --nav-bg: rgba(15, 23, 42, 0.8);
-  --card-border: rgba(148, 163, 184, 0.1);
+  --background: #0c0f18;
+  --section-bg: #0c0c0c;
+  --card-bg: #0b1018;
+  --gradient-start: #3e3daf;
+  --gradient-end: #d42a77;
+  --nav-bg: rgba(1, 1, 1, 0.8);
+  --card-border: rgba(92, 125, 170, 0.1);
 }
 
 body {
@@ -98,14 +98,10 @@ body {
 
 /* Hero Section */
 
+/* AFTER (transparent + subtle overlay via ::before) */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(
-    135deg,
-    var(--gradient-start) 0%,
-    var(--gradient-end) 100%
-  );
-
+  background: transparent;         /* let the canvas be visible */
   display: flex;
   align-items: center;
   padding: 0 5%;
@@ -218,12 +214,10 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
   transition: 0.5s;
 }
 
@@ -355,11 +349,9 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    var(--gradient-start) 0%,
-    var(--gradient-end) 100%
-  );
+  background: linear-gradient(135deg,
+      var(--gradient-start) 0%,
+      var(--gradient-end) 100%);
 
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -391,12 +383,10 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    45deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.1) 50%,
-    transparent 100%
-  );
+  background: linear-gradient(45deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 100%);
   transform: translateX(-100%);
   transition: transform 0.6s ease;
 }
@@ -448,12 +438,10 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--accent-color),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      var(--accent-color),
+      transparent);
 }
 
 .contact h2 {
@@ -519,12 +507,10 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
   transition: 0.5s;
 }
 
@@ -558,4 +544,19 @@ body {
   background: var(--background);
   color: var(--text-color);
   border-top: 1px solid var(--card-border);
+}
+
+.social-links a {
+  color: #e5e7eb;             /* base icon color */
+  opacity: 0.9;
+  transition: color .2s, opacity .2s, transform .2s;
+}
+.social-links a:hover {
+  color: #ff4da6;             /* pink hover */
+  opacity: 1;
+  transform: translateY(-1px);
+}
+.social-links i {
+  font-size: 20px;            /* icon size */
+  line-height: 1;
 }
