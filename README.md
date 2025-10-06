@@ -2,8 +2,7 @@
 
 A fast, animated personal website built with React + Vite. Includes a glitchy hero, hyperspeed background, project cards (Cloudflare AI Security Agent, Safe Route Recommender — *in the works*), and an EmailJS-powered contact form.
 
-Live: _(add Vercel link here)_
-
+Live: https://erickxvii.com/
 ---
 
 ## ✨ Features
