@@ -6,7 +6,7 @@ import { Contact } from "./components/Contact";
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { Analytics } from "@vercel/analytics/react"; // ✅ This is correct
+// import { Analytics } from "@vercel/analytics/react"; // ✅ This is correct
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -33,8 +33,8 @@ function App() {
         <p>&copy; 2025 erickxvii. All rights reserved.</p>
       </motion.footer>
 
-      {/* ✅ Add Vercel Analytics at the end of layout */}
-      <Analytics />
+      {/* ✅ Add Vercel Analytics at the end of layout
+      <Analytics />  */}
     </div>
   );
 }
