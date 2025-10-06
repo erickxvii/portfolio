@@ -3,7 +3,6 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import HyperspeedBackground from "./HyperspeedBackground.jsx";
 
-
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -37,7 +36,11 @@ export const Hero = () => {
             <span>👋 Hello, I'm</span>
           </motion.div>
 
-          <motion.h1 className="glitch" variants={fadeInUp} whileHover={{ scale: 1.02 }}>
+          <motion.h1
+            className="glitch"
+            variants={fadeInUp}
+            whileHover={{ scale: 1.02 }}
+          >
             Erick Perez
           </motion.h1>
 
@@ -46,47 +49,58 @@ export const Hero = () => {
           </motion.h2>
 
           <motion.p className="hero-description" variants={fadeInUp}>
-          I love bringing machine learning to life — whether it’s a computer vision model or an AI app that solves real, everyday problems.
+            I love bringing machine learning to life — whether it’s a computer
+            vision model or an AI app that solves real, everyday problems.
           </motion.p>
 
           <motion.div className="cta-buttons" variants={staggerContainer}>
-            <motion.a href="#projects" className="cta-primary" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.a
+              href="#projects"
+              className="cta-primary"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               View My Work
             </motion.a>
-            <motion.a href="#contact" className="cta-secondary" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.a
+              href="#contact"
+              className="cta-secondary"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               Contact Me
             </motion.a>
           </motion.div>
 
           <motion.div className="social-links" variants={staggerContainer}>
-  <motion.a
-    href="https://github.com/erickxvii"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="GitHub"
-  >
-    <i className="fa-brands fa-github" />
-  </motion.a>
+            <motion.a
+              href="https://github.com/erickxvii"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <i className="fa-brands fa-github" />
+            </motion.a>
 
-  <motion.a
-    href="https://www.linkedin.com/in/erick-perez-06b3782a9"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn"
-  >
-    <i className="fa-brands fa-linkedin" />
-  </motion.a>
+            <motion.a
+              href="https://www.linkedin.com/in/erick-perez-06b3782a9"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i className="fa-brands fa-linkedin" />
+            </motion.a>
 
-  <motion.a
-    href="https://twitter.com/br1an00524"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Twitter/X"
-  >
-    <i className="fa-brands fa-x-twitter" />
-  </motion.a>
-</motion.div>
-
+            <motion.a
+              href="https://twitter.com/br1an00524"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter/X"
+            >
+              <i className="fa-brands fa-x-twitter" />
+            </motion.a>
+          </motion.div>
+        </motion.div>
 
         <motion.div
           className="hero-image-container"
@@ -107,8 +121,7 @@ export const Hero = () => {
                 marginBottom: 50,
               }}
               style={vscDarkPlus}
-            >
-{`const aboutMe: DeveloperProfile = {
+            >{`const aboutMe: DeveloperProfile = {
   codename: "Erickxvii",
   origin: "🌇 Somewhere between a Fordham classroom and a terminal window",
   role: "AI & Software Engineer in training",
@@ -123,8 +136,7 @@ export const Hero = () => {
     "terminal-aesthetic enjoyer",
   ],
   availability: "Open to internships and collaborations",
-};`}
-            </SyntaxHighlighter>
+};`}</SyntaxHighlighter>
           </div>
 
           <motion.div
@@ -134,7 +146,9 @@ export const Hero = () => {
           >
             <div className="card-content">
               <span className="card-icon">💻</span>
-              <span className="card-text">Currently working on something awesome!</span>
+              <span className="card-text">
+                Currently working on something awesome!
+              </span>
             </div>
           </motion.div>
         </motion.div>
