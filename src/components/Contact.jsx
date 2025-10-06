@@ -56,7 +56,8 @@ export const Contact = () => {
           name: formData.name,
           email: formData.email,
           message: formData.message,
-        }
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
       setFormStatus({
@@ -137,9 +138,8 @@ export const Contact = () => {
 
           {formStatus.message && (
             <motion.div
-              className={`form-status ${
-                formStatus.success ? "success" : "error"
-              } `}
+              className={`form-status ${formStatus.success ? "success" : "error"
+                } `}
             >
               {formStatus.message}
             </motion.div>
